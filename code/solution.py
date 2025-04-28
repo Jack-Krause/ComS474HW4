@@ -17,9 +17,16 @@ class Net(nn.Module):
     def __init__(self, args):
         super(Net, self).__init__()
         ### YOUR CODE HERE
-
-
-
+        self.flatten = nn.Flatten()
+        n_classes = 10
+        
+        self.linear_relu_stack = nn.Sequential(
+            nn.Linear(3*32*32, 512),
+            nn.ReLU(),
+            nn.Linear(512, 512),
+            nn.Relu(),
+            nn.Linear(512, n_classes),
+        )
         ### END YOUR CODE
 
     def forward(self, x):
@@ -28,7 +35,7 @@ class Net(nn.Module):
         Return the predictions of each image (batch size x 10)
         '''
         ### YOUR CODE HERE
-
-
-
+        x = self.flatten(x)
+        logits = self.linear_relu_stack(x)
+        return logits
         ### END YOUR CODE
