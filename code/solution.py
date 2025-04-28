@@ -24,7 +24,7 @@ class Net(nn.Module):
             nn.Linear(3*32*32, 512),
             nn.ReLU(),
             nn.Linear(512, 512),
-            nn.Relu(),
+            nn.ReLU(),
             nn.Linear(512, n_classes),
         )
         ### END YOUR CODE
