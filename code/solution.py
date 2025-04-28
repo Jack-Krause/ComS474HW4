@@ -6,7 +6,7 @@ def get_args():
     parser = argparse.ArgumentParser(description='Args for training networks')
     parser.add_argument('-seed', type=int, default=1, help='random seed')
     parser.add_argument('-num_epochs', type=int, default=20, help='num epochs')
-    parser.add_argument('-batch', type=int, default=16, help='batch size')
+    parser.add_argument('-batch', type=int, default=8, help='batch size')
     parser.add_argument('-lr', type=float, default=0.01, help='learning rate')
     parser.add_argument('-drop', type=float, default=0.3, help='drop rate')
     args, _ = parser.parse_known_args()
