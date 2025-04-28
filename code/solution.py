@@ -18,15 +18,15 @@ class Net(nn.Module):
         super(Net, self).__init__()
         ### YOUR CODE HERE
         self.flatten = nn.Flatten()
+        n_classes = 10
+        
         self.linear_relu_stack = nn.Sequential(
-            nn.Conv2d(),
-            nn.MaxPool2d(),
-            nn.BatchNorm2d(),
-            nn.Linear(),
-            nn.RelU()
+            nn.Linear(3*32*32, 512),
+            nn.ReLU(),
+            nn.Linear(512, 512),
+            nn.Relu(),
+            nn.Linear(512, n_classes),
         )
-
-
         ### END YOUR CODE
 
     def forward(self, x):
