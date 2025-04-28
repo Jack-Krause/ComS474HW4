@@ -37,7 +37,7 @@ def train(net, trainloader, num_epochs=2):
         net.train()
         running_loss, n_batchs, total,  correct = 0.0, 0, 0, 0
         for images, labels in tqdm(
-                trainloader, desc='Epoch '+str(epoch), unit='b'):
+                trainloader, disable=True, desc='Epoch '+str(epoch), unit='b'):
             optimizer.zero_grad()
             outputs = net(images)
             loss = criterion(outputs, labels)
@@ -61,7 +61,7 @@ def test(net, testloader):
     total = 0
     with torch.no_grad():
         net.eval()
-        for images, labels in tqdm(testloader, desc='Test', unit='b'):
+        for images, labels in tqdm(testloader, disable=True, desc='Test', unit='b'):
             outputs = net(images)
             _, predicted = torch.max(outputs.data, 1)
             total += labels.size(0)

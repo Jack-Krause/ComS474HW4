@@ -1,0 +1,23 @@
+args:
+Namespace(seed=1, num_epochs=20, batch=64, lr=0.01, drop=0.3)
+Epoch 0 training loss: 2.036 training accuracy: 28.328%
+Epoch 1 training loss: 1.752 training accuracy: 38.446%
+Epoch 2 training loss: 1.634 training accuracy: 42.538%
+Epoch 3 training loss: 1.560 training accuracy: 45.054%
+Epoch 4 training loss: 1.499 training accuracy: 47.510%
+Epoch 5 training loss: 1.445 training accuracy: 49.382%
+Epoch 6 training loss: 1.396 training accuracy: 51.202%
+Epoch 7 training loss: 1.350 training accuracy: 52.784%
+Epoch 8 training loss: 1.309 training accuracy: 54.578%
+Epoch 9 training loss: 1.269 training accuracy: 55.718%
+Epoch 10 training loss: 1.232 training accuracy: 57.076%
+Epoch 11 training loss: 1.198 training accuracy: 58.504%
+Epoch 12 training loss: 1.165 training accuracy: 59.458%
+Epoch 13 training loss: 1.129 training accuracy: 60.774%
+Epoch 14 training loss: 1.098 training accuracy: 62.064%
+Epoch 15 training loss: 1.068 training accuracy: 62.970%
+Epoch 16 training loss: 1.037 training accuracy: 64.276%
+Epoch 17 training loss: 1.007 training accuracy: 65.076%
+Epoch 18 training loss: 0.977 training accuracy: 66.300%
+Epoch 19 training loss: 0.948 training accuracy: 67.218%
+Accuracy of the network on the 10000 test set: 54.41%

@@ -5,12 +5,8 @@ import os
 
 
 if __name__ == '__main__':
-        
-    print("running main")
     args = get_args()
     print(f"args:\n{args}")
-    
-    exit(0)
     
     set_random(args.seed)
     trainloader, testloader = load_data(args.batch)
