@@ -10,7 +10,7 @@ log_files = glob.glob(os.path.join(cwd, "*.log"))
 if not log_files:
     raise FileNotFoundError("log files not found.")
 
-write_dir = os.path.join(cwd, 'parsed')
+write_dir = os.path.join(cwd, 'parsedclean')
 if not os.path.exists(write_dir):
     os.mkdir(write_dir)
 
@@ -25,7 +25,7 @@ for f in log_files:
             print(f"match:\n{match}")
             
             if match:
-                contents_str += match.group(0) + "\n"
+                contents_str += match.group(0).replace('%', '') + "\n"
                 
     basename = os.path.basename(f)
     with open(os.path.join(write_dir, basename), 'w') as write_file:
